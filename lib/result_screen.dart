@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_summary/question_summary.dart';
@@ -69,6 +70,16 @@ class ResultScreen extends StatelessWidget {
               ),
               icon: const Icon(Icons.refresh),
               label: const Text('Restart Quiz!'),
+            ),
+            TextButton.icon(
+              onPressed: () {
+                SystemNavigator.pop();
+              },
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+              ),
+              icon: const Icon(Icons.exit_to_app),
+              label: const Text('Exit'),
             ),
           ],
         ),
